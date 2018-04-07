@@ -113,7 +113,7 @@ public class DrawView extends SurfaceView implements SurfaceHolder.Callback {
                 number + 2, number + 3, rotationN);
 
         rotationN += 3;
-        if (rotationN == MAX_POSITION) {
+        if (rotationN >= MAX_POSITION) {
             rotationN = 0;
             try {
                 Thread.sleep(1000);

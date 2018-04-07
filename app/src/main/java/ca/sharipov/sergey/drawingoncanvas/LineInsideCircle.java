@@ -38,10 +38,11 @@ public class LineInsideCircle {
     }
 
     public int getNextPosition() {
-        if (getDifferencePosition() > 1
+        int inaccuracy = 1;
+        if (getDifferencePosition() > inaccuracy
                 && previousNumberPosition - rotationN > numberPosition) {
             return previousNumberPosition - rotationN;
-        } else if (getDifferencePosition() < 1
+        } else if (getDifferencePosition() < -inaccuracy
                 && previousNumberPosition + rotationN < numberPosition) {
             return previousNumberPosition + rotationN;
         } else
